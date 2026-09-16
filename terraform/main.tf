@@ -30,7 +30,7 @@ resource "docker_container" "postgres" {
     host_path      = abspath("${path.module}/db/init.sql")
     container_path = "/docker-entrypoint-initdb.d/init.sql"
     read_only      = true
-}
+  }
 
   networks_advanced {
     name = docker_network.app_network.name
